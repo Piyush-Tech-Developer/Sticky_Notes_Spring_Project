@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#add-note-btn {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.note {
+    background-color: #ffffe0; /* Classic yellow */
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    min-height: 150px;
+    position: relative;
+    /* Optional: Add a slight rotation for style */
+    transform: rotate(calc(var(--rotation) * 1deg));
+}
+
+.note:hover {
+    transform: scale(1.02) rotate(calc(var(--rotation) * 1deg));
+    transition: transform 0.2s ease-in-out;
+}
+
+.note-content {
+    /* Makes the content area editable when clicked */
+    outline: none;
+    resize: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: calc(100% - 30px); /* Adjust height for button */
+    font-size: 14px;
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Add this to style.css */
+
+.note-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.note-date {
+    font-size: 0.75em; /* Smaller font size for dates */
+    color: #555;
+    display: block; /* Ensures each date gets its own line */
+}
+
+/* Make sure the textarea can adjust its height properly now */
+.note-content {
+    /* Adjusted height to account for the new header area */
+    height: calc(100% - 60px);
+}
+/* Add this to style.css */
+.note-title {
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Adjust the content height again */
+.note-content {
+    /* Adjusted height to account for the new title input */
+    height: calc(100% - 80px);
+}
+
